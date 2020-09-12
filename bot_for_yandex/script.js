@@ -19,6 +19,7 @@ if(button !=undefined){
 
     for(let i=0; i<links.length; i++){
       if(links[i].href.indexOf("xn----7sbab5aqcbiddtdj1e1g.xn--p1ai") != -1) {
+      document.querySelector('a[href*="xn----7sbab5aqcbiddtdj1e1g.xn--p1ai"]').removeAttribute("target");
       console.log("Ссылка найдена "+links[i]);
       links[i].click();
       break;
