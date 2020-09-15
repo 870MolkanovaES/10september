@@ -64,7 +64,7 @@ if(button !=undefined){
      location.href='https://yandex.ru/';
  }
  if (nextYandexPage){
-     setTimeout(()=>{document.getElementsByClassName("link link_theme_none link_target_serp pager__item pager__item_kind_next i-bem link_js_inited")[0].click();},getRandom(1000,4000));
+     setTimeout(()=>{document.querySelectorAll(".pager__item_kind_next")[0].click();},getRandom(1000,4000));
  }
 }
 function getRandom(min,max){
@@ -75,8 +75,4 @@ function getCookie(name) {
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-}
-function getRandom(min,max){
- return Math.floor(Math.random()*(max-min)+min);
 }
